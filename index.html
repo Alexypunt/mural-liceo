@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mural Informativo Escolar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f1f5f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #3b82f6;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #1e3a8a;
+    }
+
+    .card small {
+      color: #555;
+    }
+
+    footer {
+      background-color: #1e3a8a;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mural Informativo - Liceo Bicentenario Victor Jara</h1>
+    <p id="3 de agosto del 2025"></p>
+  </header>
+
+  <nav>
+    <a href="#">Noticias</a>
+    <a href="#">Eventos</a>
+    <a href="#">Días festivos</a>
+    <a href="#">Anuncios</a>
+  </nav>
+
+  <main>
+    <div class="card">
+      <h3>📢 Cambio de horario</h3>
+      <small>Publicado: 2 de agosto</small>
+      <p>Desde el lunes, las clases comenzarán a las 8:30 AM en vez de las 8:00 AM.</p>
+    </div>
+
+    <div class="card">
+      <h3>🎉 Celebración del Día del Estudiante</h3>
+      <small>Publicado: 1 de agosto</small>
+      <p>Este viernes se realizará una actividad recreativa en el patio principal a las 11:00 AM.</p>
+    </div>
+
+    <div class="card">
+      <h3>📅 Feriado: 15 de agosto</h3>
+      <small>Publicado: 30 de julio</small>
+      <p>No habrá clases por conmemoración de la Asunción de la Virgen.</p>
+    </div>
+  </main>
+
+  <footer>
+    Hecho por [Tu Nombre] • Proyecto escolar 2025
+  </footer>
+
+  <script>
+    // Mostrar la fecha actual
+    const fecha = new Date();
+    const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById("fecha").textContent = fecha.toLocaleDateString('es-ES', opciones);
+  </script>
+</body>
+</html>
