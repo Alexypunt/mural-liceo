@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mural Informativo Escolar</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -16,14 +20,25 @@
       background-color: #ffffff;
       color: #2649aa;
       padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
       text-align: center;
+    }
+
+    header img {
+      max-width: 100%;
+      height: auto;
     }
 
     nav {
       background-color: #3b82f6;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 2rem;
+      gap: 1rem;
       padding: 0.5rem;
     }
 
@@ -66,25 +81,24 @@
   </style>
 </head>
 <body>
- <header style="display: flex; align-items: center; gap: 15px; padding: 10px;">
-  <img src = https://raw.githubusercontent.com/Alexypunt/mural-liceo/refs/heads/master/Logo-liceo-horizontal-1.png alt="Logo liceo" width="225" height="78">
-  <h1 style="margin: 0;">Mural Informativo</h1>
-</header>
-
-    <p id="3 de agosto del 2025"></p>
+  <header>
+    <img src="https://raw.githubusercontent.com/Alexypunt/mural-liceo/refs/heads/master/Logo-liceo-horizontal-1.png" alt="Logo liceo" width="225" height="78">
+    <h1>Mural Informativo</h1>
   </header>
+
+  <p id="fecha" style="text-align: center; font-weight: bold;"></p>
 
   <nav>
     <a href="noticias.html">Noticias</a>
     <a href="eventos.html">Eventos</a>
     <a href="dias-festivos.html">Días festivos</a>
     <a href="anuncios.html">Anuncios</a>
-    <a href="index.html".html">Pagina principal</a>
+    <a href="Inicio.html">Página principal</a>
   </nav>
 
   <main>
     <div class="card">
-      <h3>📢 </h3>
+      <h3>📢 Cambio de horario</h3>
       <small>Publicado: 2 de agosto</small>
       <p>Desde el lunes, las clases comenzarán a las 8:30 AM en vez de las 8:00 AM.</p>
     </div>
@@ -107,7 +121,6 @@
   </footer>
 
   <script>
-    // Mostrar la fecha actual
     const fecha = new Date();
     const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     document.getElementById("fecha").textContent = fecha.toLocaleDateString('es-ES', opciones);
